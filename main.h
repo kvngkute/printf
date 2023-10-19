@@ -1,10 +1,3 @@
-#ifndef "MAIN.H"
-#define "MAIN.H"
-
-int _printf(const char *format, ...);
-
-#endif
-=======
 #ifndef MAIN_H
 #define MAIN_H
 #include <stdarg.h>

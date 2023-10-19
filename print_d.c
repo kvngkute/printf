@@ -5,9 +5,9 @@
  * Return: Length of character
  */
 
-int print_integer(va_list args)
+int print_integer(va_list arg)
 {
-int n = va_args(args, int);
+int n = va_arg(arg, int);
 int num, last = n % 10, digit, exp = 1;
 int i = 1;
 
@@ -16,7 +16,7 @@ num = n;
 
 if (last < 0)
 {
-_putchar('_');
+putchar('_');
 num = -num;
 last = -last;
 i++;
@@ -33,12 +33,12 @@ num = n;
 while (exp > 0)
 {
 digit  = num / exp;
-_putchar(digit + '0');
+putchar(digit + '0');
 num = num - (digit * exp);
 exp = exp / 10;
 i++;
 }
 }
-_putchar (last + '0');
+putchar (last + '0');
 return (i);
 }
